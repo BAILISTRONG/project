@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	   // var a=5;
+	   // alert(a);
+	   // var a=10;
+	   // alert(a)
+	   // var a=10;
+	   // var a=5,b=10,c=15;
+	   // alert(a)
+	   // alert(b)
+	   // alert(c)
+	   // alert(Number.MAX_VALUE)
+	   // var a="胡海轰"
+	   // alert(a)
+	   // alert(typeof a)
+	   // var num1 = 43;
+	   // var num2 = 40;
+	   // var num3 =num1+num2;
+	   // var info = '我们班有俩个班组成第一个班505班有'+num1+'人，第二个班507班有'+num2+'人,总共有'+num3+'人';
+	   // alert(info)
+	   // var str='abcd', str1='abcc'
+	   // alert(str<str1)
+	   // alert(1 == true);
+	   // alert(1 == 'true')
+	   // alert(true == 'true')
+	   // alert(undefined == null)
+	   // var a=10
+	   // a+='10'
+	   // alert(a)
+	   // var num = 10 ;
+	   // var flag;
+	   // flag = num%2==0 ? true : false;/*三元表达式*/
+	   // if(num%2 == 0){
+	   // 	   flag = true;
+	   // }
+	   // else{
+	   // 	   flag = false;
+	   // }
+	   // alert(flag)
+	   // var scrl=prompt('请输入你的成绩',75);
+	   // if(scrl>=90 && scrl<=100){
+	   // 	   alert('优秀')
+	   // }else if(scrl>=80 && scrl<90){
+	   // 	   alert('良好')
+	   // }else if(scrl>=70 && scrl<80){
+	   // 	   alert('中等')
+	   // }else if(scrl>=60 && scrl<70){
+	   // 	   alert('及格')
+	   // }else if(scrl>=0 && scrl<60){
+	   // 	   alert('不及格')
+	   // }else{
+	   // 	   alert('输入错误')
+	   // }
+	   // var week=prompt('请输入星期',1);
+	   // switch(week){
+	   // 	  case '星期一':
+	   // 	     alert('一组')
+	   // 	     break;
+	   // 	     case '星期二':
+	   // 	     alert('二组')
+	   // 	     break;
+	   // 	     case '星期三':
+	   // 	     alert('三组')
+	   // 	     break;
+	   // 	     case '星期四':
+	   // 	     alert('四组')
+	   // 	     break;
+	   // 	     case '星期五':
+	   // 	     alert('五组')
+	   // 	     break;
+	   // 	     default:alert('输入错误')
+	   // 	 }
+	   // for (var i=1;i<11;i++){
+	   // 	alert(i)
+	   // }
+	   // var sum=0
+	   // for(var i=1;i<11;i%2==0){
+	   // 	sum += i;
+	   // }
+       // alert(sum)
+        // var table="<table border=1 cellspacing=0>"
+        // for(var i=1;i<11;i++){
+        //         table +="<tr>"
+        //         for(var j=1;j<11;j++){
+        //             table +="<td>"+i+"-"+i+"</td>"
+        //         }
+        //         table +="</tr>"
+        // }
+        // document.write(table)
+       //  金字塔
+       var row=5
+       for(var i=1;i<=row;i++){
+          for(var j=1;j<=row-i;j++){
+         	 document.write('_')
+          }
+       	  for(var j=1;j<=2*i-1;j++){
+       	   	document.write('*')
+       	   }
+       	   document.write('<br/>')
+       }
+       // var row=5
+       // for(var i=row;i>=1;i--){
+       //    for(var j=1;j<=row-i;j++){
+       //   	 document.write('_')
+       //    }
+       // 	  for(var j=1;j<=2*i-1;j++){
+       // 	   	document.write('*')
+       // 	   }
+       // 	   document.write('<br/>')
+       // }
+       // document.write(row)
+       // var i=1,j=1
+       // for(var k=0;k<=100;){
+       // 	k=i+j
+       //  document.write(k)
+       // 	i=j;
+       // 	j=k;
+       // }
+       // var arr=[9,18,27,56,5,42,13,20,1];
+       // var max=arr[0];
+       // for(var i=0;i<arr.length;i++){
+       // 	if(max<arr[i]){
+       // 		max=arr[i];
+       // 	}
+       // }
+       // document.write(max)
+       var arr=[9,18,27,56,5,42,13,20,16];
+       for(var i=0;i<arr.length;i++){
+       	for(var j=i+1;j<arr.length;j++){
+       		if(arr[j]>arr[i]){
+       			var temp=arr[i]
+       			arr[i]=arr[j]
+       			arr[j]=temp
+       		}
+       	}
+       }
+      console.log(arr)
+      // 是否为空
+      // newarr
+      // 
+      // var arr=[1,2,,3,,4,5,,6,7,8]
+      // var arr1=[]
+      //  for(var i=0;i<arr.length;i++){
+      //  	   // if(arr[i]!=undefined){
+      //      //    arr1[arr1.length]=arr[i]
+      //  	   // }
+      //  	   if((typeof arr[i])!='undefined')
+      //  	   	arr1[arr1.length]=arr[i]
+      //  }
+      //  console.log(arr1)
+      var max=0
+      var arr=[[36,56,66],[86,76,35],[55,89,98]]
+        for(var i=0;i<arr.length;i++){
+        	for(var j=0;j<arr.length;j++){
+                 if(max<arr[i][j]){
+                 	max=arr[i][j]
+                 }
+        	}
+        }
+        console.log(max)
+	</script>
+</body>
+</html>

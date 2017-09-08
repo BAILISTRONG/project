@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	   document.write('<table border=1 cellspacing=0 cellpadding=10>')
+	   for(var i=1;i<10;i++){
+		document.write('<tr>')
+			for(var j=1;j<=10;j++){
+				document.write('<td>'+i+'*'+i+'</td>')
+			}
+		}
+		document.write('</tr>')
+		document.write('</table>')
+	</script>
+	<br>
+	<script>
+	   document.write('<table border=1 cellspacing=0 cellpadding=10>')
+	   for(var i=1;i<10;i++){
+		document.write('<tr>')
+			for(var j=1;j<=i;j++){
+				var a=i*j 
+				document.write('<td>'+i+'*'+i+'='+a+'</td>')
+			}
+		}
+		document.write('</tr>')
+		document.write('</table>')
+	</script>
+	<br>
+	<!-- 行变色 -->
+	<script>
+	   document.write('<table border=1 cellspacing=0 cellpadding=10>')
+	   for(var i=1;i<10;i++){
+	   	if(i%2==0){
+	   		document.write('<tr bgcolor=red>')
+	   	}
+	   	if(i%2==1){
+		    document.write('<tr bgcolor=blue>')
+		}
+			for(var j=1;j<=i;j++){
+				var a=i*j 
+				document.write('<td>'+i+'*'+i+'='+a+'</td>') 
+		    }
+			document.write('</tr>')
+		}
+		document.write('</table>')
+	</script>
+	<!-- 列变色 -->
+	<br>
+	<script>
+	   document.write('<table border=1 cellspacing=0 cellpadding=10>')
+	   for(var i=1;i<10;i++){
+		document.write('<tr>')
+			for(var j=1;j<=i;j++){
+					if(j%2==0){
+					var a=i*j
+					document.write('<td bgcolor=yellow>'+i+'*'+i+'='+a+'</td>')
+				}
+				if(j%2==1){
+					var a=i*j
+					document.write('<td bgcolor=purple>'+i+'*'+i+'='+a+'</td>')
+				}
+			}
+		}
+		document.write('</tr>')
+		document.write('</table>')
+	</script>
+</body>
+</html>
