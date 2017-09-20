@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	button{
+		width: 100px;
+		height: 30px;
+		background: #008;
+		font-size: 20px;
+        color: #fff;
+        border: none;
+        margin-top: 20px;
+        line-height: 30px;
+	}
+	a{
+		font-size: 30px;
+		color: skyblue;
+	}
+</style>
+<body>
+	<hl><a href="index.html">欢迎光临你的世界</a></hl><br>
+	<button id='forward'>前进</button>
+	<button id='back'>后退</button>
+	<button id='shuaxin'>刷新</button>
+	<script>
+         let forward=document.getElementById('forward')
+         let back=document.getElementById('back')
+         let shuaxin=document.getElementById('shuaxin')
+         forward.onclick=function(){
+         	history.forward()
+         }
+         back.onclick=function(){
+         	history.back()
+         }
+         shuaxin.onclick=function(){
+         	history.go()
+         }
+     </script>
+</body>
+</html>

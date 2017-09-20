@@ -7,67 +7,139 @@
 <body>
 	<script>
 		/*递归*/
-		fn(1)
-		function fn(num){
-			if(num<5){
-				fn(++num)
+		// fn(1)
+		// function fn(num){
+		// 	if(num<5){
+		// 		fn(++num)
+		// 	}
+		// 	alert(num)
+		// }
+		// var arr=[1,2,3,4,5]
+/*地址(浅拷贝)*/
+		// var arr1=arr;
+		// arr1[1]='a';
+		// arr[3]='x';
+  //       console.log(arr)
+  //       console.log(arr1)
+/*传值（深拷贝）*/
+        // var arr=[1,2,3,4,5]
+        // var arr1=[]
+        // for(var i=0;i<arr.length;i++){
+        // 	arr1[i]=arr[i]
+        // }
+        // arr[1]='a'
+        // arr1[1]='b'
+        // console.log(arr)
+        // console.log(arr1)
+/*深1*/
+        // var arr=[1,2,3,4,5,['a','b']]
+        // var arr1=copy(arr)
+        // console.log(arr1)
+        // function copy(arr){
+        // 	var newarr=[]
+        // 	for(var i=0;i<arr.length;i++){
+        // 		if(typeof arr[i]=='object'){
+        // 			newarr[newarr.length]=copy(arr[i])
+        // 		}else {
+        // 			newarr[i]=arr[i]
+        // 		}
+        // 	}
+        // 	return newarr 
+        // }
+/*闭包函数*/
+        // function fn(){
+        // 	var num=10;
+        // 	return fn1
+        // 	function fn1(){
+        // 		num++
+        // 		return num
+        // 	}
+        // }
+        // var result=fn()
+        // alert(result())
+/*内置 顶层 函数*/
+        // console.log(isNaN('胡海轰丑吗'))
+/*构造函数*/
+        // function person(){}
+        // let zhangsan= new person()
+        // let lisi= new person()
+        // lisi.name='李四'
+        // lisi.age=30
+        // zhangsan.name='张三'
+        // zhangsan.age=20
+        // zhangsan.say=function(){
+        //     alert(zhangsan.name)
+        // }
+        // console.log(zhangsan,lisi)
+        // zhangsan.say()
+/*构造函数2*/
+        // function student(name,age,sex,hun){
+        //       this.name=name;
+        //       this.age=age;
+        //       this.sex=sex;
+        //       this.hun=hun;
+        //       this.occupation=function(){
+        //       	alert()
+        //       }
+        // }
+        // let zhangsan= new student('胡海轰',25,'男','已婚')
+        // console.log(zhangsan)
+        // zhangsan.occupation()
+        // alert(zhangsan['name'])
+        // for(let i in zhangsan){
+        // 	console.log(`${i}---${zhangsan[i]}`)
+        // }
+/*json函数*/
+        // let zhangsan = {
+        // 	age:18,
+        // 	name:'张三疯',
+        // 	sex:'男',
+        // 	occupation:'武当掌门人',
+        // 	say:function(){
+        // 		console.log('无极纯阳功')
+        // 	}
+        // }
+        // console.log(zhangsan)
+        // zhangsan.say()
+        // let zhangsan ={};
+        // zhangsan.name='张三'
+        // zhangsan.age=20
+        // alert(zhangsan.constructor)
+        // console.log(zhangsan)
+/*json 3*/
+        // class student{
+        // 	constructor(){
+        // 		this.name='zhangsan';
+        // 		this.age=18;
+        // 		this.say=function(){
+        // 			console.log(this.name);
+        // 		}
+        // 	}
+        // 	study(){
+        // 		alert('学习');
+        // 	}
+        // }
+        // let zhangsan= new student();
+        // zhangsan.say();
+        // zhangsan.study();
+        // console.log(zhangsan)
+	</script>
+	<script>
+		let arr= new myArray('a','b','c','d')
+		console.log(arr)
+		arr.push('x','y','z');
+		function myArray(){
+			for(let i=0;i<arguments.length;i++){
+				this[i]=arguments[i];
 			}
-			alert(num)
+			this.length=arguments.length;
+			this.push=function(){
+             for(let i=0;i<arguments.length;i++){
+             	this[this.length]=arguments[i];
+                this.length++;
+             }
+			}
 		}
-		var arr=[1,2,3,4,5]
-		/*地址(浅拷贝)*/
-		var arr1=arr;
-		arr1[1]='a';
-		arr[3]='x';
-        console.log(arr)
-        console.log(arr1)
-        /*传值（深拷贝）*/
-        var arr=[1,2,3,4,5]
-        var arr1=[]
-        for(var i=0;i<arr.length;i++){
-        	arr1[i]=arr[i]
-        }
-        arr[1]='a'
-        arr1[1]='b'
-        console.log(arr)
-        console.log(arr1)
-        // /*深1*/
-        var arr=[1,2,3,4,5,['a','b']]
-        var arr1=copy(arr)
-        console.log(arr1)
-        function copy(arr){
-        	var newarr=[]
-        	for(var i=0;i<arr.length;i++){
-        		if(typeof arr[i]=='object'){
-        			newarr[newarr.length]=copy(arr[i])
-        		}else {
-        			newarr[i]=arr[i]
-        		}
-        	}
-        	return newarr 
-        }
-        /*闭包函数*/
-        function fn(){
-        	var num=10;
-        	return fn1
-        	function fn1(){
-        		num++
-        		return num
-        	}
-        }
-        var result=fn()
-        alert(result())
-        /*内置 顶层 函数*/
-        console.log(isNaN('胡海轰丑吗'))
-        /*构造函数*/
-        function person(){}
-        let zhangsan= new person()
-        let lisi= new person()
-        lisi.name='李四'
-        lisi.age=30
-        zhangsan.name='张三'
-        zhangsan.age=20
-        console.log(zhangsan,lisi)
 	</script>
 </body>
 </html>

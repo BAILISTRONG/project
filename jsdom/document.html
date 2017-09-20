@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#box{
+		width: 200px;
+		height: 300px;
+		background: greenyellow;
+	}
+</style>
+<body>
+		<div id="box"></div>
+		<div class="box1"></div>
+		<div class="box1"></div>
+		<div class="box1"></div>
+	<script>
+	    // 文档标题
+		console.dir(document.title);
+		document.title="document.eeee";
+		//访问URL
+		console.log(document.URL);
+		//背景色
+		document.bgColor='#FFFHD55';
+		//前景色
+		document.fgColor='#ggr4tr';
+		//获取id
+        let box=document.getElementById('box');
+        box.style.height="500px";
+        //获取标签名
+        let divs=document.getElementsByTagName('div');
+        console.log(divs)
+        divs[0].style.height="500px";
+        //越界divs[4]---undefined
+        for(let i=0;i<divs.length;i++){
+        	divs[i].style.height="500px";
+        }
+        // let box1 =getElementsByClassName('box1')
+        // for(let i=0;i<divs.length;i++){
+        // 	box1[i].style.height="500px";
+        // }
+	</script>
+</body>
+</html>

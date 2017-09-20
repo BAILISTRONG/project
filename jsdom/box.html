@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.box{
+		width: 600px;
+		height: 600px;
+		background: red;
+		margin: 20px auto;
+		position: relative;
+	}
+     .son{
+     	width: 150px;
+     	height: 150px;
+     	background: skyblue;
+     	position: absolute;
+     }
+</style>
+<body>
+    <div class="box">
+    	<div class="son"></div>
+    </div>
+	<script>
+	      
+	 //    let box=$('.box')[0]
+	 //    box.getComputedStyle()
+		// //页面中box的实际尺寸
+		// (box.offsetWidth);
+		// 相对于父元素的相对位置
+		// 父元素有定位（无(8)---有(0)）
+		// 子元素无影响--平移、边框、border有影响left、margin-left、
+		// 无定位margin-left+left
+		// 父元素无影响--border、left、有影响padding
+		// 放大缩小（改width会改掉位置）
+		// offsetLeft
+		// offsetTop
+		// let box=document.getElementsByClassName('box')[0];
+		// let t;
+		//  t=setInterval(fn,60);
+		//  let speed=10;
+		// function fn(){
+		// 	let w=parseInt(getComputedStyle(box,null).width);
+		// 	if(w>=500){
+  //              speed=-speed;
+		// 	}
+		// 	if(w<300){
+		// 		speed=-speed
+		// 	} 
+		// 	 box.style.width=`${w+speed}px`;
+		// }
+		//   animate(box,{width:500,height:500},function(){
+		//   	 style.background='green'
+		//   });
+		// function animate(obj,attrobj,callback){
+		// 	let t=setInterval(function(){
+  //               let w=parseInt(getComputedStyle(obj,null)[i]);
+		// 	    if(w>=attrobj[i]){
+  //                   w=attrobj[i];
+  //                   clearInterval(t);
+  //                   if(callback){
+  //                   	callback();
+  //                   }
+		// 	    }   
+		// 	    obj.style[i]=w+10+'px';
+		// },2000)
+	// }
+	</script>
+</body>
+</html>

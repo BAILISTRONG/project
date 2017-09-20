@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slide</title>
+</head>
+<style>
+/* 	#box{
+		width: 200px;
+		height: 300px;
+		background: greenyellow;
+	} */
+	div{
+		width: 200px;
+		height: 300px;
+		background: greenyellow;
+		margin: 20px;
+		transition: 1s;
+	}
+    button{
+    	margin: 5px 10px; 
+    }
+
+</style>
+<body>
+	<button>slideUp</button>
+		<button>slideDown</button>
+		<button>slideToggle</button>
+		<div id="slide"></div>
+		<script>
+	   // 出现与消失
+       let buts=document.getElementsByTagName("button");
+       let slide=document.getElementById("slide");
+       // console.log(but);
+       // console.log(slide);
+       // buts[0].onclick=function(){
+       //    slide.style.height="300px";
+       // }
+       // buts[1].onclick=function(){
+       //    slide.style.height="0";
+       // } 
+       //通过状态来表示
+       let flag=true;
+       buts[2].onmousedown=function(){
+       	if(flag){
+          slide.style.height="0";
+          flag=false;
+       	}else{
+           slide.style.height="300px";
+          flag=true;
+       	}
+       } 
+		</script>
+</body>
+</html>

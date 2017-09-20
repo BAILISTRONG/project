@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dian</title>
+</head>
+<style>
+	ul{
+		width: 200px;
+		height: 30px;
+        background: pink;
+	}
+	li{
+		width: 30px;
+		height: 30px;
+		background: greenyellow;
+		border-radius: 50%;
+		margin: 0 5px;
+		float: left;
+		/* //手型鼠标 */
+         cursor:pointer;
+		list-style: none;
+	}
+
+</style>
+<body>
+		<ul class="btn">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	<script>
+		let ul = document.getElementsByClassName("btn");
+		let li =ul[0].getElementsByTagName("li");	
+		for(let i=0;i<li.length;i++){
+          li[i].onmousemove=function(){
+          	li[i].style.background='red';
+          }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+main{
+	width:500px;
+	height: 500px;
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid #000;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+main>h3{
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+}

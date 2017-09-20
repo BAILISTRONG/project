@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        
+		//冒充(只有方法没有属性)
+		zhangsan.say.call(lisi);
+		zhangsan.say.apply(lisi);
+		// 类继承
+		class person{
+		constructor(){
+			this.name='zhangsan';
+			this.age=18;
+		}
+	}
+	class Student{
+		constructor(){
+			super();
+			this.num='wuif';
+		}
+	}
+    Student.prototype=new person()
+	</script>
+</body>
+</html>

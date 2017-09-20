@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+</head>
+<body>
+	<script>
+		// let arr=[1,2,3,4,5,6]
+		// let arr1=['a','b','c']
+		// for(let i=0;i<arr1.length;i++){
+		// 	arr.push(arr1[i])
+		// }
+		// arr.push(...arr1)
+		// arr.splice(2,2,'a','b')
+		// let newarr=arr.concat()
+		// arr.reverse()
+		// let arr2=[12,8,6,1,30,3,66,123,75]
+		// arr2.sort()
+		// arr2.sort(function(a,b){
+		// 	return a-b<0;
+		// })
+		// let ou=[]
+		// arr2.forEach(function(value,index){
+		// 	if(value%2==0){
+		// 		ou.push(value)
+		// 	}
+		// })
+		// let filter=arr2.filter(function(value,index,obj){
+		// 	return value%2==0
+		// })
+		// let map=arr2.map(function(value,index,obj){
+		// 	return value+index
+		// })
+		// let map=arr.map((value,index)=>value+index)
+		let arr=[1,2,3,4,5,1,2,3]
+		/*第一种*/
+		// function asd(arr){
+  //           let newarr=[];
+		//     for(let i=0;i<arr.length;i++){
+		//     	if(!newarr.includes(arr[i])){
+		//     		newarr.push(arr[i])
+		//     	}
+		//     }
+		//     return newarr
+		// }
+		// console.log(asd(arr))
+		/*第二种*/
+		function quchong(arr){
+                let newarr=[]
+            for(let i=0;i<arr.length;i++){
+            	let arr1=[]
+            	for(let j=0;j<arr.length;j++){
+            		arr1[arr1.length]=arr[j]
+            	}
+            	if(!newarr.includes(arr1[i])){
+            		newarr.push(arr1[i])
+            	}
+            }
+            return newarr
+		}
+		/*第三种*/
+		// Array.prototype.quchong=function(){
+		// 	let newarr=[]
+		// 	for(let i=0;i<this.length;i++){
+		// 		let flag=true;
+		// 		for(let j=i+1;j<this.length;j++){
+		// 		    if(this[j]==this[i]){
+		// 		    	flag=false;
+		// 		    	break;
+		// 		    }
+		// 		}
+		// 		if(flag){
+		// 			newarr.push(this[i])
+		// 		}
+		// 	}
+		// 	return newarr
+		// }
+		console.log(quchong(arr))
+		// console.log(ou)
+		// console.log(map)
+	</script>
+</body>
+</html>

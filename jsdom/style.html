@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>style</title>
+</head>
+<style>
+	div{
+		width: 200px;
+		height: 200px;
+        background: pink;
+	}
+	.green{
+		background: greenyellow;
+		transform: scale(2,2)
+	}
+	.red{
+		background: red;
+	}
+	#cil{
+		border-radius: 50%;
+	}
+</style>
+<body>
+	<div class="a" style="border:2px solid green"></div>
+	<!-- //先定义好style，之后改id或class -->
+	<script>
+		// let box =document.getElementsByClassName('o');
+		let divs =document.getElementsByTagName('div');
+		//修改类名改样式
+		divs[0].className="red";
+		//修改id改样式
+        divs[0].id="cil";
+        //行内修改样式
+        divs[0].style.background='blue';
+        divs[0].style['background']='blue';
+        //获取不到样式，只能获取行内样式
+        console.log(divs[0].style.background);
+        console.log(divs[0].style.border);
+        // getComputedStyle(对象，默认值)
+        // 获取但不能设置对象的样式
+        // window.getComputedStyle(div[0], null).width;
+	</script>
+</body>
+</html>

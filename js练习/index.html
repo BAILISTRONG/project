@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<main class="login">
+	    <h3>用户登录</h3>
+		<input type="text" name="user" value="" placeholder="请输入你的用户名" id="user">
+		<input type="text" name="pass" value="" placeholder="请输入你的密码" id="pass">
+		<button id="button">登录</button>
+	</main>
+	<script>
+		let user=document.getElementById('user')
+		let pass=document.getElementById('pass')
+		let button=document.getElementById('button')
+		button.onclick=function(){
+			let a= user.value.trim();
+			let b= pass.value.trim();
+			if(a=='zhangsan'&& b==123456){
+				alert('登录成功')
+			}else{
+				location.replace('error.html')
+			}
+		}
+
+	</script>
+</body>
+</html>

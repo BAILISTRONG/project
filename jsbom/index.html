@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	button{
+		width: 100px;
+		height: 30px;
+		background: #008;
+		font-size: 20px;
+        color: #fff;
+        border: none;
+        margin-top: 20px;
+        line-height: 30px;
+	}
+	a{
+		font-size: 30px;
+		color: skyblue;
+	}
+</style>
+<body>
+	<hl><a href="index1.html">欢迎光临我的世界</a></hl><br>
+	<button id='forward'>前进</button>
+	<button id='back'>后退</button>
+	<button id='shuaxin'>刷新</button>
+	<script>
+         let forward=document.getElementById('forward')
+         forward.onclick=function(){
+         	history.forward()
+         }
+         let back=document.getElementById('back')
+         back.onclick=function(){
+         	history.back()
+         }
+         let shuaxin=document.getElementById('shuaxin')
+         shuaxin.onclick=function(){
+         	history.go()
+         }
+		// let t=window.setInterval(function(){
+		// 	alert(2);
+		// },800);
+		// window.setInterval(()=>{alert(1)})
+		// window.clearInterval(t)
+		// window.setTimeout
+		// let fn=function(){
+		// 	alert(1);
+		// 	setTimeout(fn,1000);
+		// }
+		// fn()
+		// confirm('确定要推出吗？')；
+		// prompt()
+		// open('https://www.baidu.com','newwindow','width=1000,height=1000')
+		// history()
+	</script>
+</body>
+</html>

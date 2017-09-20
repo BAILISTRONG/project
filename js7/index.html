@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- 	<script>
+		function person(){
+			this.name='张三';
+			this.age=18;
+		}
+		person.prototype={
+			sleep:function(){
+				alert('休息');
+			},
+			say:function(){
+				alert(this.name)
+			},
+			play:function(){
+				alert(`&{this.name}玩儿`)
+			}
+		}
+		person.prototype.eat=function(){
+			alert('吃')
+		}
+         
+         let zhangsan=new person();
+         let lisi=new person();
+         console.log(zhangsan)
+         zhangsan.eat()
+         lisi.eat()
+         zhangsan.play()
+	</script> -->
+	<script>
+		function Student(){
+			this.name='zhangsan';
+			this.age=18;
+			this.sex='男';
+			this.skill=function(){
+				alert('篮球')
+			}
+		}
+		function Person(){
+			this.class='wuil1707';
+			this.ex='前端';
+		}
+		Person.prototype=new Student();
+		person.prototype.aa=function(){
+			alert('person原型对象')
+		}
+		let lisan=new Person();
+		console.log(lisan);
+		lisan.skill();
+		// console.log(zhangsi instanceof Student);
+		// console.log(lisan instanceof Student);
+		// let arr=[];
+		// console.log(zhangsi instanceof Array);
+		// console.log(arr instanceof Array);
+	</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="box"></div>
+<div class="box box1 box2"></div>
+<div class="box2 box1"></div>
+<div class="box1"></div>
+<div class="box box1"></div>
+<div class="one"></div>
+<div id="one"></div>
+<div class="one"></div>
+<div id="one">
+	<div class="one"></div>
+</div>
+	<script>
+		// let an=document.getElementById('an');
+		// an.onclick=function(){
+		// 	let divs=document.getElementById('box');
+		// 	if(divs.style.height=='400px'){
+		// 		divs.style.height='0px';
+		// 	}else{
+		// 		divs.style.height='400px';
+		// 	}
+		// }
+		// for(let i=0)
+		// let now=0;
+		for(let i=0;i<liy.length;i++){
+			liy[i].onmouseover=function(){
+				tet[now].style.display='none';
+				tet[i].style.display='block';
+				now=i;
+			}
+		}
+	// for(let i=0;i<lis.length;i++){
+ //      lis[i].onmouseover=function(){
+ //      	let item =this.getElementsByClassName('item');
+ //      	item[i].className="item block";
+ //      }
+ //      lis[i].onmouseout=function(){
+ //      	let item =this.getElementsByClassName('item');
+ //      	item[i].className="item";
+      	
+ //      }
+	// 	for(var i=0;i<liy.length;i++){
+	// 		liy[i].index=i;
+	// 		liy[i].onmouseover=function(){
+ //                 tet[now].style.display='none';
+ //                 tet[this.index].display='block';
+ //                 now=this.index
+	// 		}
+	// 	}
+	// 	for(var i=0;i<liy.length;i++){
+	// 		liy[i].index=i;
+	// 		liy[i].onclick=(fuction(i){
+	// 			return function(){
+	// 				tet[now].style.display='none';
+ //                    tet[this.index].display='block';
+ //                    now=this.index
+	// 			}
+	// 		})(i)
+	// 	}
+	var box=getClass('box1');
+	console.log(box.length);
+	for(var i=0;i<box.length;i++){
+        box[i].innerHTML='这是一个div标签'
+	}
+	
+	function getClass(classname,ranger){
+		ranger=ranger ||document
+		if(ranger.getElementsByClassName){
+			return ranger.getElementsByClassName(classname);
+		}else{
+			var newarr=[];
+			var all=ranger.getElementsByTagName('*');
+			for(var i=0;i<all.length;i++){
+				if(checkClass(all[i].className,classname)){
+					newarr.push(all[i]);
+				}
+			}
+		}
+		return newarr;
+	}
+    function checkClass(className,classname){
+    	var arr=className.split('');
+    	for(var i=0;i<arr.length;i++){
+    		if (arr[i]==classname) {
+    			return true;
+    		}
+    	}
+    	return false
+    }
+
+ /*
+ $函数，获取指定函数
+ $(slect)
+ $('.one')$('#one') $('div')
+ 参数说明
+ select 字符串  选择器
+    .  className
+    #  id
+        tagName
+正则对象的创建/^[a-z][a-z1-6]{0,7}$/.test(select)
+  */
+  console.log($('.one'))
+ function $(select,ranger){
+     ranger=ranger||document
+ 	var first=select.charAt(0);
+ 	if(first=='.'){
+ 		return getClass(select.substring(1),ranger);
+ 	}else if(first=='#'){
+ 		return ranger.getElementById(select.substring(1));
+ 	}else if(/^[a-z][a-z1-6]{0,7}$/.test(select)){
+ 		return ranger.getElementsByTagName(select)
+ 	}
+ }
+	</script>
+</body>
+</html>

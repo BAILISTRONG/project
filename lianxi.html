@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联系</title>
+</head>
+<body>
+	<script>
+		// let arr=[1,2,3,4,5,1,2,3]
+		// function quchong(arr){
+		// 	let newarr=[]
+		// 	for(let i=0;i<arr.length;i++){
+		// 		if(!newarr.includes(arr[i])){
+		// 			newarr.push(arr[i])
+		// 		}
+		// 	}
+		// 	return newarr
+		//     for(let i=0;i<arr.length;i++){
+		//     	let flag
+		//     }
+		// }
+		// console.log(quchong(arr))
+		function table(x){
+			document.write('<table border=1 cellspacing=0 cellpadding=10>')
+			for(let i=1;i<x;i++){
+				document.write('<tr></tr>');
+				for(let j=1;j<i+1;j++){
+					document.write('<td>'+i+'-'+j+'</td>')
+				}
+			}
+		}
+		table(10)
+	</script>
+</body>
+</html>

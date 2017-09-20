@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -136,7 +136,7 @@
  // return:在函数调用结束时给函数值;
  //        用于终止函数
  // 判断数组是否有特定值，存在true,false
-//  var arr =[12,2,64,66,97,7,66];
+// var arr =[12,2,64,66,97,7,66];
 // console.log(fn(arr,64))
 //  function fn(arr,type){
 //  	/*arr Array arguments>1*/
@@ -149,26 +149,26 @@
 //      }
 //    }return false
 //  }
- // 判断调用数组师父符合条件
+ // 判断调用数组符合条件
  //参数大于两个 arguments.length
  //访问num
-     // var arr=[1,2,3,4,5,6]
+     var arr=[1,2,3,4,5,6]
      // var str=join(arr,'+')
-     // // console.log(join(arr))
+     console.log(join(arr))
      // console.log(str)
-     // function join(arr,str){
-     // 	str=str==undefined ? '-' : str;
-     // 	str=str||'-';
-     // 	var result='';
-     // 	for(var i=0;i<arr.length;i++){
-     // 		if(i<arr.length-1){
-     // 			result+=arr[i]+str;
-     // 		}else{
-     // 			result+=arr[i]
-     // 		}
-     // 	}
-     // 	return result;
-     // }
+     function join(arr,str){
+     	// str=str==undefined ? '-' : str;
+     	str=str||'-';
+     	var result='';
+     	for(var i=0;i<arr.length;i++){
+     		if(i<arr.length-1){
+     			result+=arr[i]+str;
+     		}else{
+     			result+=arr[i]
+     		}
+     	}
+     	return result;
+     }
 /*filter();
   数组里面偶数的数组元素
 */ 
@@ -209,6 +209,7 @@
 		// console.log(result)
 	</script>
 	<script>
+	 /*映射*/
 	 //    var arr=[1,2,3,4,5,6]
 		// var result= map(arr,function(math){
 		// 	return math*3})
@@ -220,114 +221,115 @@
   //             }
   //             return newarr
 		// }
-		var arr=[1,2,3,4,5,6]
-		var result= filter(arr,function(math){
-               return math%2==0})
-		console.log(result)
-		function filter(arr,fn){
-              var newarr=[]
-              for(var i=0;i<arr.length;i++){
-              	if(fn(arr[i])){
-                   newarr[newarr.length]=arr[i]	
-                }
-              }
-              return newarr
-		}
-	      /*首次出现的位置*/
-		var arr=[1,2,3,4,1,5];
-        var a=indexOf(arr,1)
-        console.log(a)
-		function indexOf(arr,value){
-			for(var i=0;i<arr.length;i++){
-				if(arr[i]==value){
-					return i;
-				}
-			}
-			return -1;
-		}
+		/*过滤*/
+		// var arr=[1,2,3,4,5,6]
+		// var result= filter(arr,function(math){
+  //              return math%2==0})
+		// console.log(result)
+		// function filter(arr,fn){
+  //             var newarr=[]
+  //             for(var i=0;i<arr.length;i++){
+  //             	if(fn(arr[i])){
+  //                  newarr[newarr.length]=arr[i]	
+  //               }
+  //             }
+  //             return newarr
+		// }
+		/*首次出现的位置*/
+		// var arr=[1,2,3,4,1,5];
+  //       var a=indexOf(arr,1)
+  //       console.log(a)
+		// function indexOf(arr,value){
+		// 	for(var i=0;i<arr.length;i++){
+		// 		if(arr[i]==value){
+		// 			return i;
+		// 		}
+		// 	}
+		// 	return -1;
+		// }
 		/*最后出现的位置*/
-		 var a=lastindexOf(arr,1)
-		function lastindexOf(arr,num){
-			for(var i=arr.length-1;i>0;i--){
-				if(arr[i]==num){
-					return i;
-				}
-			}
-			return -1;
-		}
+		//  var a=lastindexOf(arr,1)
+		// function lastindexOf(arr,num){
+		// 	for(var i=arr.length-1;i>0;i--){
+		// 		if(arr[i]==num){
+		// 			return i;
+		// 		}
+		// 	}
+		// 	return -1;
+		// }
 		/*翻转*/
-		var arr=[1,2,3,4,1,5];
-		console.log(splice(arr,2,2,'a','b'))
-		console.log(revase(arr))
-		function revase(arr,value){
-			var newarr=[]
-			for(var i=arr.length-1;i>-1;i--){
-			    newarr[newarr.length]=arr[1]
-                     push(newarr,arr[i])
-			}return newarr
-		}
-		function push(arr,...rest){
-			for(var i=0;i<rest.length;i++){
-				arr[arr.length]=rest[i]
-			}
+		// var arr=[1,2,3,4,5,6];
+		// // console.log(splice(arr,2,2,'a','b'))
+		// console.log(revase(arr))
+		// function revase(arr,value){
+		// 	var newarr=[]
+		// 	for(var i=arr.length-1;i>-1;i--){
+		// 	    newarr[newarr.length]=arr[i]
+  //                    // push(newarr,arr[i])
+		// 	}return newarr
+		// }
+		// function push(arr,...rest){
+		// 	for(var i=0;i<rest.length;i++){
+		// 		arr[arr.length]=rest[i]
+		// 	}
 		// }
 		/*万能的删除*/
-		console.log(splicedelete(arr,2,2))
-        function splicedelete(arr,pos,num){
-        	var newarr=[];
-        	for(var i=0;i<arr.length;i++){
-        		if(pos<=i && i<pos+num){
-        			continue;
-        		}
-        		newarr[newarr.length]=arr[i];
-        	}
-        	return newarr;
-        }
+		// console.log(splicedelete(arr,2,2))
+  //       function splicedelete(arr,pos,num){
+  //       	var newarr=[];
+  //       	for(var i=0;i<arr.length;i++){
+  //       		if(pos<=i && i<pos+num){
+  //       			continue;
+  //       		}
+  //       		newarr[newarr.length]=arr[i];
+  //       	}
+  //       	return newarr;
+  //       }
         // /*w万能的添加*/
-        console.log(spliceAdd(arr,4,'c','d'))
-        function spliceAdd(arr,pos,...rest){
-        	var newarr=[]
-        	for(var i=0;i<pos;i++){
-        		newarr[newarr.length]=arr[i]
-        	}
-        	for(var i=0;i<rest.length;i++){
-        		newarr[newarr.length]=rest[i]
-        	}
-        	for(var i=pos;i<arr.length;i++){
-        		newarr[newarr.length]=arr[i]
-        	}
-        	return newarr
-        }
-        function splice(arr,pos,num,...rest){
-        	var newarr=splicedelete(arr,pos,num)
-        	if(rest.length>0){
-        		newarr=spliceAdd(newarr,pos,...rest)
-        	}
-        	return newarr
-        }
+        // console.log(spliceAdd(arr,4,'c','d'))
+        // function spliceAdd(arr,pos,...rest){
+        // 	var newarr=[]
+        // 	for(var i=0;i<pos;i++){
+        // 		newarr[newarr.length]=arr[i]
+        // 	}
+        // 	for(var i=0;i<rest.length;i++){
+        // 		newarr[newarr.length]=rest[i]
+        // 	}
+        // 	for(var i=pos;i<arr.length;i++){
+        // 		newarr[newarr.length]=arr[i]
+        // 	}
+        // 	return newarr
+        // }
+        // function splice(arr,pos,num,...rest){
+        // 	var newarr=splicedelete(arr,pos,num)
+        // 	if(rest.length>0){
+        // 		newarr=spliceAdd(newarr,pos,...rest)
+        // 	}
+        // 	return newarr
+        // }
         /*some every*/
-        var arr=[-1,-2,-3,-4,-5,-6]
-        var result=some(arr,function(math){
-        	return math>0})
-        console.log(result)
-        function some(arr,fn){
-        	for(var i=0;i<arr.length;i++){
-        		if(fn(arr[i])){
-        			return true;
-        		}
-        	}
-        	return false;
-        }
-        var result=every(arr,function(math){
-        	return math>0})
-        function every(arr,fn){
-        	for(var i=0;i<arr.length;i++){
-        		if(!fn(arr[i])){
-        			return false;
-        		}
-        	}
-        	return true;
-        }
+        // var arr=[-1,-2,-3,-4,-5,-6]
+        // var result=some(arr,function(math){
+        // 	return math>0})
+        // console.log(result)
+        // function some(arr,fn){
+        // 	for(var i=0;i<arr.length;i++){
+        // 		if(fn(arr[i])){
+        // 			return true;
+        // 		}
+        // 	}
+        // 	return false;
+        // }
+        // var result=every(arr,function(math){
+        // 	return math>0})
+        // function every(arr,fn){
+        // 	for(var i=0;i<arr.length;i++){
+        // 		if(!fn(arr[i])){
+        // 			return false;
+        // 		}
+        // 	}
+        // 	return true;
+        // }
 	</script>
 </body>
 </html>
